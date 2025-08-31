@@ -1,0 +1,13 @@
+//Experiment 1: Installation ,environment setup and starting c language
+//1. write a c program to print "hello world"/
+
+#include <stdio.h>
+
+int main(){
+	printf("Name - priyanshu \nsap id - 950027008\ncourse-BCA\nBatch5");
+	printf("\n--------------------------------------\n");
+	
+	printf("Hello World");
+	
+	return 0;
+	}
