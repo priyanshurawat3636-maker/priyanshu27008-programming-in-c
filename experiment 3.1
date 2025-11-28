@@ -1,0 +1,40 @@
+#include <stdio.h> 
+#include <math.h> 
+int main() { 
+int a, b, c; 
+printf("NAME=PRIYANSHU\nSAP 
+ID=590027008\nCOUSE=BCAB5\n"); 
+printf("Enter three sides of a triangle: "); 
+scanf("%d %d %d", &a, &b, &c); 
+// Check triangle validity 
+if ((a + b > c) && (a + c > b) && (b + c > 
+a)) { 
+printf("The triangle is valid.\n"); 
+if (a == b && b == c) 
+printf("It is an Equilateral 
+Triangle.\n"); 
+else if (a == b || b == c || a == c) 
+ 
+ 
+ 
+ 
+ 
+ 
+            printf("It is an Isosceles 
+Triangle.\n"); 
+        else 
+            printf("It is a Scalene Triangle.\n"); 
+        // Check right-angled 
+        if ((a * a == b * b + c * c) || 
+            (b * b == a * a + c * c) || 
+            (c * c == a * a + b * b)) { 
+            printf("It is also a Right-Angled 
+Triangle.\n"); 
+        } 
+    } else { 
+        printf("The triangle is NOT valid.\n"); 
+    } 
+    return 0;  
+} 
+ 
+3.3. WAP to comput
