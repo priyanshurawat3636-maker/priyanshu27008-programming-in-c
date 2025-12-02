@@ -1,0 +1,25 @@
+#include <stdio.h>  
+int main() {  
+int i, j, k, l, rows = 5; // Variables declared at 
+the top  
+printf("Name-Priyanshu\nSAP_ID
+590027008\nCourse-BCA\nBatch-5");  
+printf("\n--------------------------------\n\n");  
+// Upper part  
+for(i = 1; i <= rows; i++) {  
+for(j = 1; j <= rows - i; j++) printf(" ");  
+for(k = rows; k > rows - i; k--) printf("%d", k);  
+for(l = rows - i + 2; l <= rows; l++) printf("%d", 
+l);  
+}  
+printf("\n");  
+// Lower part  
+for(i = rows - 1; i >= 1; i--) {  
+for(j = 1; j <= rows - i; j++) printf(" ");  
+for(k = rows; k > rows - i; k--) printf("%d", k);  
+for(l = rows - i + 2; l <= rows; l++) printf("%d", 
+l);  
+}  
+printf("\n");  
+return 0;  
+} 
