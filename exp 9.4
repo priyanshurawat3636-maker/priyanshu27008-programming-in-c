@@ -1,0 +1,64 @@
+#include <stdio.h> 
+ 
+void print_matrix(int matrix[10][10], int rows, int cols) { 
+ 
+    for (int i = 0; i < rows; i++) { 
+        for (int j = 0; j < cols; j++) { 
+            printf("%5d ", matrix[i][j]); 
+        } 
+        printf("\n"); 
+    } 
+} 
+ 
+int main() { 
+    int m, n, p, q; 
+ 
+    printf("Enter the number of rows and columns for matrix A (m x n): "); 
+    scanf("%d %d", &m, &n); 
+ 
+    printf("Enter the number of rows and columns for matrix B (p x q): "); 
+    scanf("%d %d", &p, &q); 
+ 
+    if (n != p) { 
+        printf("\nMatrix multiplication is NOT possible because the number of columns " 
+               "in A (%d) does NOT match the number of rows in B (%d).\n", n, p); 
+        return 1; 
+    } 
+ 
+    int A[10][10], B[10][10], result[10][10]; 
+ 
+    printf("\nEnter elements of matrix A in row-major order:\n"); 
+    for (int i = 0; i < m; i++) { 
+        for (int j = 0; j < n; j++) { 
+            scanf("%d", &A[i][j]); 
+        } 
+    } 
+ 
+    printf("\nEnter elements of matrix B in row-major order:\n"); 
+    for (int i = 0; i < p; i++) { 
+        for (int j = 0; j < q; j++) { 
+            scanf("%d", &B[i][j]); 
+        } 
+    } 
+ 
+    // Matrix multiplication 
+    for (int i = 0; i < m; i++) { 
+        for (int j = 0; j < q; j++) { 
+            result[i][j] = 0; 
+            for (int k = 0; k < n; k++) { 
+                result[i][j] += A[i][k] * B[k][j]; 
+            } 
+        } 
+    } 
+ 
+    printf("\nMatrix A (%d x %d):\n", m, n); 
+    print_matrix(A, m, n); 
+ 
+    printf("\nMatrix B (%d x %d):\n", p, q); 
+    print_matrix(B, p, q); 
+ 
+    printf("\nResultant Matrix (A x B):\n"); 
+    print_matrix(result, m, q); 
+ 
+    return 0; 
+}  
