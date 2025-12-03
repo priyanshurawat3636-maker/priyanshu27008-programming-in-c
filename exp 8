@@ -1,0 +1,20 @@
+#include <stdio.h> 
+// Global variable declaration 
+int count = 10; 
+int main() {
+ printf("Name-Priyanshu\nSap-id - 590027008\nCourse-Bca\nBatch-b5");
+ printf("\nInitial value of count: %d\n", count);
+ increment();  // Function 1 uses global variable
+ multiply();   // Function 2 uses global variable 
+increment();  // Modify again 
+printf("Final value of count in main(): %d\n", count); 
+return 0; 
+} 
+void increment() { 
+count++;  // Access and modify global variable 
+printf("Value of count in increment(): %d\n", count); 
+} 
+void multiply() { 
+count=count * 2;  // Access and modify global variable 
+printf("Value of count in multiply(): %d\n", count); 
+} 
