@@ -1,0 +1,20 @@
+#include <stdio.h> 
+// Global variable 
+int globalVar = 10; 
+void myFunction() { 
+printf("Name-Priyanshu\nSap-id - 590027008\nCourse-Bca\nBatch-b5");
+ // Local variable
+ int localVar = 20;
+// Accessing global variable inside the function 
+printf("\nInside function, globalVar = %d\n", globalVar);
+ // Accessing local variable inside the function 
+printf("Inside function, localVar = %d\n", localVar); 
+} 
+int main() { 
+myFunction(); 
+// Trying to access local variable outside the function (uncomment to see error) 
+// printf("Outside function, localVar = %d", localVar); // Error: localVar undefined 
+// Accessing global variable outside the function 
+printf("Outside function, globalVar = %d\n", globalVar); 
+return 0; 
+}
