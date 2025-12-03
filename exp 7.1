@@ -1,0 +1,25 @@
+int main() { 
+printf("Name priyanshu\nSAP ID -590027008\nCourse-BCA\nBatch-B5\n");
+ int L = 20;
+ int limit = L * L * L; // set a reasonable cube limit
+ for (int n = 1; n <= limit; n++) {
+ int count = 0; 
+for (int a = 1; a * a * a < n; a++) { 
+for (int b = a + 1; b * b * b < n; b++) { 
+if (a * a * a + b * b * b == n) { 
+count++; 
+                    if (count == 1) { 
+                        printf("%d can be expressed as %d^3 + %d^3\n", n, a, b); 
+                    } 
+                    if (count == 2) { 
+                        printf("...and also as another pair\n"); 
+                    } 
+                } 
+            } 
+        } 
+        if (count >= 2) { 
+            printf("%d is a Ramanujan number\n", n); 
+        } 
+    } 
+    return 0; 
+} 
