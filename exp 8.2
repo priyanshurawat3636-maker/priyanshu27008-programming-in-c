@@ -1,0 +1,20 @@
+#include <stdio.h> 
+int main() { 
+printf("Name-Priyanshu\nSap-id - 590027008\nCourse-Bca\nBatch-b5");
+ int a = 10;  // Declared in main block
+ { 
+} 
+int b = 20;  // Declared inside inner block 1 
+printf("\nInside inner block 1, a = %d\n", a);  // Accessible (outer block)
+ printf("Inside inner block 1, b = %d\n", b);  // Accessible (local to this block) 
+// b is not accessible here, as b's scope ended with the inner block 
+//   printf("Outside inner block 1, b = %d\n", b); // This will cause an error 
+{ 
+int c = 30;  // Declared inside inner block 2 
+printf("Inside inner block 2, c = %d\n", c);  // Accessible 
+} 
+// c is not accessible here, scope ended with inner block 2 
+// printf("Outside inner block 2, c = %d", c); // This will cause an error 
+printf("Inside main block, a = %d\n", a);  // Accessible here 
+return 0; 
+} 
