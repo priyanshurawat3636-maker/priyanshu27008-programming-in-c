@@ -1,0 +1,25 @@
+int main() { 
+printf("Name priyanshu\nSAP ID -590027008\nCourse-BCA\nBatch-B5\n"); 
+int n, i, number_to_find, count = 0; 
+printf("Enter the number of integers: "); 
+scanf("%d", &n); 
+int arr[n]; 
+printf("Enter %d integers:\n", n); 
+    for (i = 0; i < n; i++) { 
+        scanf("%d", &arr[i]); 
+    } 
+ 
+    printf("Enter the number to find the frequency of: "); 
+    scanf("%d", &number_to_find); 
+ 
+    for (i = 0; i < n; i++) { 
+        if (arr[i] == number_to_find) 
+            count++; 
+    } 
+ 
+    printf("The number %d appears %d times in the list.\n", number_to_find, count); 
+ 
+    return 0; 
+} 
+ 
+ 
